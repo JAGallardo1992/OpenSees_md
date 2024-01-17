@@ -43,6 +43,9 @@
 #include <OPS_Globals.h>
 #include <OPS_Stream.h>
 
+#include <float.h>
+#include <math.h>
+
 #include <elementAPI.h>
 #include <UniaxialMaterial.h>
 

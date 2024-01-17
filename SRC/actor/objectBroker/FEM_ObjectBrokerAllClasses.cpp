@@ -373,7 +373,7 @@
 #include "elastomericBearing/HDR.h"
 #include "elastomericBearing/LeadRubberX.h"
 #include "elastomericBearing/TSM_2D.h"
-#include "Macroelement3d/Macroelement3D.h"
+#include "Macroelement3d/Macroelement3d.h"
 
 #include "frictionBearing/FlatSliderSimple2d.h"
 #include "frictionBearing/FlatSliderSimple3d.h"
