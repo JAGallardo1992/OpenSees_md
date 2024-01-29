@@ -42,6 +42,7 @@ target_sources(OPS_Material
     SectionForceDeformation.cpp
     TimoshenkoSection3d.cpp
 	OrthotropicMembraneSection.cpp
+	ElasticOrthotropicMembranePlateSection.cpp
     PUBLIC
     BiaxialHysteretic.h
     Bidirectional.h
@@ -79,6 +80,7 @@ target_sources(OPS_Material
     SectionForceDeformation.h
     TimoshenkoSection3d.h
 	OrthotropicMembraneSection.h
+	ElasticOrthotropicMembranePlateSection.h
 )
 
 target_include_directories(OPS_Material PUBLIC ${CMAKE_CURRENT_LIST_DIR})

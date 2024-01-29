@@ -1517,6 +1517,9 @@
     <ClCompile Include="..\..\..\SRC\material\nD\CohesionFriction3d.cpp">
       <Filter>nD</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\SRC\material\section\ElasticOrthotropicMembranePlateSection.cpp">
+      <Filter>section</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\SRC\material\uniaxial\AxialSp.h">
@@ -2779,6 +2782,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\SRC\material\nD\CohesionFriction3d.h">
       <Filter>nD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SRC\material\section\ElasticOrthotropicMembranePlateSection.h">
+      <Filter>section</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -180,6 +180,7 @@
 #include "FiberSectionAsym3d.h" //Xinlong Du
 #include "ElasticPlateSection.h"
 #include "ElasticMembranePlateSection.h"
+#include "ElasticOrthotropicMembranePlateSection.h"
 #include "OrthotropicMembraneSection.h"
 #include "MembranePlateFiberSection.h"
 #include "DoubleMembranePlateFiberSection.h"
@@ -1768,6 +1769,9 @@ FEM_ObjectBrokerAllClasses::getNewSection(int classTag)
 
 	case SEC_TAG_ElasticMembranePlateSection:
 		return new ElasticMembranePlateSection();
+
+	case SEC_TAG_ElasticOrthotropicMembranePlateSection:
+		return new ElasticOrthotropicMembranePlateSection();
 
 	case SEC_TAG_OrthotropicMembraneSection:
 		return new OrthotropicMembraneSection();

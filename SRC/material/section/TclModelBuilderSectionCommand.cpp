@@ -57,6 +57,7 @@ extern "C" int         OPS_ResetInputNoBuilder(ClientData clientData, Tcl_Interp
 
 #include <ElasticPlateSection.h>
 #include <ElasticMembranePlateSection.h>
+#include <ElasticOrthotropicMembranePlateSection.h>
 #include <OrthotropicMembraneSection.h>
 #include <MembranePlateFiberSection.h>
 #include <DoubleMembranePlateFiberSection.h>
@@ -114,6 +115,7 @@ extern void *OPS_ElasticMembranePlateSection(void);
 extern void *OPS_ElasticPlateSection(void);
 
 extern void* OPS_OrthotropicMembraneSection(void);
+extern void* OPS_ElasticOrthotropicMembranePlateSection(void);
 
 int
 TclCommand_addFiberSection (ClientData clientData, Tcl_Interp *interp, int argc,
@@ -384,6 +386,14 @@ TclModelBuilderSectionCommand (ClientData clientData, Tcl_Interp *interp, int ar
 	theSection = (SectionForceDeformation *)theMat;
       else 
 	return TCL_ERROR;  
+    }
+
+    else if (strcmp(argv[1], "ElasticOrthotropicMembranePlateSection") == 0) {
+        void* theMat = OPS_ElasticOrthotropicMembranePlateSection();
+        if (theMat != 0)
+            theSection = (SectionForceDeformation*)theMat;
+        else
+            return TCL_ERROR;
     }
 
     else if (strcmp(argv[1], "OrthotropicMembraneSection") == 0) {

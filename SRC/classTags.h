@@ -359,6 +359,7 @@
 #define SEC_TAG_CreepSection 38
 
 #define SEC_TAG_OrthotropicMembraneSection	41
+#define SEC_TAG_ElasticOrthotropicMembranePlateSection	42
 
 #define SEC_TAG_MCFTFiberSection2d 7601
 

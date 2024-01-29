@@ -80,6 +80,7 @@ void* OPS_StraightReinfLayer();
 void* OPS_CircReinfLayer();
 void* OPS_RectPatch();
 void* OPS_ElasticMembranePlateSection();
+void* OPS_ElasticOrthotropicMembranePlateSection();
 void* OPS_OrthotropicMembraneSection();
 void* OPS_MembranePlateFiberSection();
 void* OPS_DoubleMembranePlateFiberSection();
@@ -313,6 +314,7 @@ namespace {
 	functionMap.insert(std::make_pair("Generic1D", &OPS_UniaxialSection));
 	functionMap.insert(std::make_pair("Generic1d", &OPS_UniaxialSection));
 	functionMap.insert(std::make_pair("ElasticMembranePlateSection", &OPS_ElasticMembranePlateSection));
+	functionMap.insert(std::make_pair("ElasticOrthotropicMembranePlateSection", &OPS_ElasticOrthotropicMembranePlateSection));
 	functionMap.insert(std::make_pair("OrthotropicMembraneSection", &OPS_OrthotropicMembraneSection));
 	functionMap.insert(std::make_pair("PlateFiber", &OPS_MembranePlateFiberSection));
 	functionMap.insert(std::make_pair("DoublePlateFiber", &OPS_DoubleMembranePlateFiberSection));	
