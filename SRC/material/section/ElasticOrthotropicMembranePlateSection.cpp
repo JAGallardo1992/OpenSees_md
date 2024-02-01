@@ -191,7 +191,7 @@ const Vector&  ElasticOrthotropicMembranePlateSection::getStressResultant( )
 
     //membrane behavior
     double A11 = h * (E1 / (1.0 - nu12 * nu21));
-    double A12 = h * (E1 * nu12 / (1 - nu12 * nu21));
+    double A12 = h * (E2 * nu12 / (1 - nu12 * nu21));
     double A22 = h * (E2 / (1.0 - nu12 * nu21));
     double A66 = h * G12;
 
@@ -223,7 +223,7 @@ const Matrix&  ElasticOrthotropicMembranePlateSection::getSectionTangent( )
 {
 
     double A11 = h * (E1 / (1.0 - nu12 * nu21));
-    double A12 = h * (E1 * nu12 / (1 - nu12 * nu21));
+    double A12 = h * (E2 * nu12 / (1 - nu12 * nu21));
     double A22 = h * (E2 / (1.0 - nu12 * nu21));
     double A66 = h * G12;
 
@@ -266,7 +266,7 @@ const Matrix&  ElasticOrthotropicMembranePlateSection::getInitialTangent( )
 {
 
     double A11 = h * (E1 / (1.0 - nu12 * nu21));
-    double A12 = h * (E1 * nu12 / (1 - nu12 * nu21));
+    double A12 = h * (E2 * nu12 / (1 - nu12 * nu21));
     double A22 = h * (E2 / (1.0 - nu12 * nu21));
     double A66 = h * G12;
 
