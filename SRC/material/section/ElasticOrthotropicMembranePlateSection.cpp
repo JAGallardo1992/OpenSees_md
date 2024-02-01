@@ -108,7 +108,7 @@ SectionForceDeformation*  ElasticOrthotropicMembranePlateSection::getCopy( )
 {
   ElasticOrthotropicMembranePlateSection *clone ;
 
-  clone = new ElasticOrthotropicMembranePlateSection(this->getTag(), E1, E2, nu12, nu21, G12, G13, G23, h, rho) ; //new instance of this class
+  clone = new ElasticOrthotropicMembranePlateSection(this->getTag(), E1, E2, nu12, G12, G13, G23, h, rho) ; //new instance of this class
 
   //    *clone = *this ; //assignment to make copy
   clone->rhoH = this->rhoH ;
