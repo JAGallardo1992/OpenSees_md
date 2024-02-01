@@ -54,7 +54,6 @@ class ElasticOrthotropicMembranePlateSection : public SectionForceDeformation{
         double E1,
         double E2,
         double nu12,
-        double nu21,
         double G12,
         double G13,
         double G23,

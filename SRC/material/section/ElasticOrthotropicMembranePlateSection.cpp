@@ -43,7 +43,7 @@ ID      ElasticOrthotropicMembranePlateSection::array(8) ;
 
 void* OPS_ElasticOrthotropicMembranePlateSection()
 {
-    if (OPS_GetNumRemainingInputArgs() < 9) {
+    if (OPS_GetNumRemainingInputArgs() < 8) {
         opserr << "WARNING insufficient arguments\n";
         opserr << "Want: section ElasticOrthotropicMembranePlateSection tag? E1? E2? nu12? nu21? G12? G13? G23? h? <rho?>\n";
         return 0;
@@ -56,12 +56,12 @@ void* OPS_ElasticOrthotropicMembranePlateSection()
         return 0;
     }
 
-    double data[9]  = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+    double data[9]  = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
     numdata = OPS_GetNumRemainingInputArgs();
 
-    if (numdata > 9) numdata = 9;
+    if (numdata > 8) numdata = 8;
 
-    if (numdata < 8) {
+    if (numdata < 7) {
         opserr << "WARNING invalid double values\n";
         return 0;
     }
@@ -71,7 +71,7 @@ void* OPS_ElasticOrthotropicMembranePlateSection()
         return 0;
     }
 
-    return new ElasticOrthotropicMembranePlateSection(tag, data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8]);
+    return new ElasticOrthotropicMembranePlateSection(tag, data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]);
 }
 
 //null constructor
@@ -83,12 +83,13 @@ SectionForceDeformation( 0, SEC_TAG_ElasticOrthotropicMembranePlateSection )
 
 //full constructor
 ElasticOrthotropicMembranePlateSection::ElasticOrthotropicMembranePlateSection(int tag,
-    double _E1, double _E2, double _nu12, double _nu21, double _G12, double _G13, double _G23,
+    double _E1, double _E2, double _nu12, double _G12, double _G13, double _G23,
     double _h, double _rho)
     : SectionForceDeformation(tag, SEC_TAG_ElasticOrthotropicMembranePlateSection),
-    E1(_E1), E2(_E2), nu12(_nu12), nu21(_nu21), G12(_G12), G13(_G13), G23(_G23), h(_h), rho(_rho), strain(8)
+    E1(_E1), E2(_E2), nu12(_nu12), G12(_G12), G13(_G13), G23(_G23), h(_h), rho(_rho), strain(8)
 {
     rhoH  = rho * h;
+	nu21 = nu12*E2/E1;
 
 }
 
