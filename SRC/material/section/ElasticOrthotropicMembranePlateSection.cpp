@@ -45,7 +45,7 @@ void* OPS_ElasticOrthotropicMembranePlateSection()
 {
     if (OPS_GetNumRemainingInputArgs() < 8) {
         opserr << "WARNING insufficient arguments\n";
-        opserr << "Want: section ElasticOrthotropicMembranePlateSection tag? E1? E2? nu12? nu21? G12? G13? G23? h? <rho?>\n";
+        opserr << "Want: section ElasticOrthotropicMembranePlateSection tag? E1? E2? nu12? G12? G13? G23? h? <rho?>\n";
         return 0;
     }
 
@@ -56,7 +56,7 @@ void* OPS_ElasticOrthotropicMembranePlateSection()
         return 0;
     }
 
-    double data[9]  = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+    double data[8]  = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
     numdata = OPS_GetNumRemainingInputArgs();
 
     if (numdata > 8) numdata = 8;
@@ -113,6 +113,7 @@ SectionForceDeformation*  ElasticOrthotropicMembranePlateSection::getCopy( )
   //    *clone = *this ; //assignment to make copy
   clone->rhoH = this->rhoH ;
   clone->strain = this->strain;
+  clone->nu21 = this->nu21;
 
   return clone ;
 }
