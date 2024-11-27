@@ -144,6 +144,9 @@
     <Filter Include="Macroelement3d">
       <UniqueIdentifier>{05849dd6-24c8-4ce9-8d4e-e32165eeb605}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ArchMacroElement3D">
+      <UniqueIdentifier>{2ddc0114-cd23-4258-8af3-5df63a2060eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\SRC\element\Element.cpp">
@@ -1085,6 +1088,9 @@
     <ClCompile Include="..\..\..\SRC\element\Macroelement3d\WrappedMaterial.cpp">
       <Filter>Macroelement3d</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\SRC\element\ArchMacroElement3D\ArchMacroElement3D.cpp">
+      <Filter>ArchMacroElement3D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\SRC\element\Element.h">
@@ -1908,6 +1914,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\SRC\element\Macroelement3d\WrappedMaterial.h">
       <Filter>Macroelement3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SRC\element\ArchMacroElement3D\ArchMacroElement3D.h">
+      <Filter>ArchMacroElement3D</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

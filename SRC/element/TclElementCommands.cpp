@@ -145,6 +145,7 @@ extern void *OPS_LeadRubberX(void);
 extern void *OPS_ElastomericX(void);
 extern void* OPS_TSM_2D(void);
 extern void* OPS_Macroelement3d(void);
+extern void* OPS_ArchMacroElement3D(void);
 extern void *OPS_N4BiaxialTruss(void);
 extern void *OPS_AC3D8HexWithSensitivity(void);
 extern void *OPS_ASI3D8QuadWithSensitivity(void);
@@ -833,6 +834,15 @@ TclModelBuilderElementCommand(ClientData clientData, Tcl_Interp *interp,
 
   } else if (strcmp(argv[1], "Macroelement3d") == 0) {
       void* theEle = OPS_Macroelement3d();
+      if (theEle != 0)
+          theElement = (Element*)theEle;
+      else {
+          opserr << "TclElementCommand -- unable to create element of type : " << argv[1] << endln;
+          return TCL_ERROR;
+      }
+
+  } else if (strcmp(argv[1], "ArchMacroElement3D") == 0) {
+      void* theEle = OPS_ArchMacroElement3D();
       if (theEle != 0)
           theElement = (Element*)theEle;
       else {

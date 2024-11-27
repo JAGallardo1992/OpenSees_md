@@ -83,5 +83,6 @@ add_subdirectory(CEqElement)
 add_subdirectory(IGA)
 
 add_subdirectory(Macroelement3d)
+add_subdirectory(ArchMacroElement3D)
 
 

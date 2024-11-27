@@ -103,6 +103,7 @@ void* OPS_LeadRubberX();
 void* OPS_ElastomericX();
 void* OPS_TSM_2D();
 void* OPS_Macroelement3d();
+void* OPS_ArchMacroElement3D();
 void* OPS_MVLEM();
 void* OPS_SFI_MVLEM();
 void* OPS_MVLEM_3D();
@@ -706,6 +707,7 @@ namespace {
 	functionMap.insert(std::make_pair("ElastomericX", &OPS_ElastomericX));
 	functionMap.insert(std::make_pair("TSM_2D", &OPS_TSM_2D));
 	functionMap.insert(std::make_pair("Macroelement3d", &OPS_Macroelement3d));
+	functionMap.insert(std::make_pair("ArchMacroElement3D", &OPS_ArchMacroElement3D));
 	functionMap.insert(std::make_pair("MVLEM", &OPS_MVLEM2d3d));
 	functionMap.insert(std::make_pair("SFI_MVLEM", &OPS_SFI_MVLEM2d3d));
 	functionMap.insert(std::make_pair("MVLEM_3D", &OPS_MVLEM2d3d));

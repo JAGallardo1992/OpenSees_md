@@ -869,6 +869,7 @@
 
 #define ELE_TAG_TSM_2D             299 // Jose Gallardo
 #define ELE_TAG_Macroelement3d             300 // Jose Gallardo
+#define ELE_TAG_ArchMacroElement3D             301 // Ivana
 
 #define FRN_TAG_Coulomb            1
 #define FRN_TAG_VelDependent       2

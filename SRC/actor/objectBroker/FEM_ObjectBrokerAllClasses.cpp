@@ -375,6 +375,7 @@
 #include "elastomericBearing/LeadRubberX.h"
 #include "elastomericBearing/TSM_2D.h"
 #include "Macroelement3d/Macroelement3d.h"
+#include "ArchMacroElement3D/ArchMacroElement3D.h"
 
 #include "frictionBearing/FlatSliderSimple2d.h"
 #include "frictionBearing/FlatSliderSimple3d.h"
@@ -1042,7 +1043,10 @@ FEM_ObjectBrokerAllClasses::getNewElement(int classTag)
 
 	case ELE_TAG_Macroelement3d:
 		return new Macroelement3d();
-      
+    
+	case ELE_TAG_ArchMacroElement3D:
+		return new ArchMacroElement3D();
+		
     case ELE_TAG_HDR:
       return new HDR();
       
